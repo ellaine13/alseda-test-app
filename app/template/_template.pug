@@ -3,6 +3,7 @@ block variables
 include mixins/bemto/bemto.pug
 include blocks/btn/btn.pug
 include blocks/logo/logo.pug
+include blocks/nav/nav.pug
 
 doctype html
 html(lang="en")
@@ -47,11 +48,11 @@ html(lang="en")
 
 	body
 		div.wrapper
-			.content
-				include blocks/header/header.pug
+			include blocks/header/header.pug
 
+			main
 				block content
 
+			include blocks/footer/footer.pug
 
-		include blocks/footer/footer.pug
 

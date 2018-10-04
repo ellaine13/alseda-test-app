@@ -19,6 +19,8 @@ h1 {
 
 a {
 	background-color: transparent;
+	text-decoration: none;
+	transition: all .3s ease;
 }
 
 b,
@@ -88,26 +90,17 @@ body {
 	font-size: 12px;
 	line-height: 1.5;
 	color: $color-text;
-
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-		height: 100%;
-		max-width: 100%;
-	}
-
-	.content {
-		flex: 1 0 auto;
-	}
-
-	.footer {
-		flex: 0 0 auto;
-	}
 }
 
-.container {
+.wrapper {
+	position: relative;
 	width: 100%;
-	max-width: 1040px;
+	max-width: 1000px;
+	min-height: 100%;
 	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+main {
+	background-color: #949494;
 }

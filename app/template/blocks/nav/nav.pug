@@ -1,0 +1,13 @@
+mixin nav(data)
+	+b('nav').nav
+		+e('ul').list
+			each item in data.list
+				+e('li').item
+					+e('a').link(href= item.link)= item.text
+
+					if item.list
+						+e('ul').sublist
+							each subitem in item.list
+								+e('li').subitem
+									+e('a').sublink(href= subitem.link)= subitem.text
+

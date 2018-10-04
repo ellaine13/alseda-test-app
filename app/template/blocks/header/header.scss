@@ -1,10 +1,15 @@
 #{$header} {
 	position: relative;
-	@include clearfix;
-	width: 100%;
-	padding: 10px 10px 8px;
 	background: #6c6c6c;
 	color: #fff;
+
+	&__row {
+		@include clearfix;
+
+		&:first-child {
+			padding: 9px 11px 8px;
+		}
+	}
 
 	&__text {
 		position: relative;
@@ -28,5 +33,9 @@
 		font-weight: 400;
 		font-size: 1.666666em;
 		line-height: 1.15;
+	}
+
+	&__nav {
+		width: 100%;
 	}
 }

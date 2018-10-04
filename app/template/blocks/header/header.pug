@@ -1,7 +1,45 @@
 +b('header').header
-	+logo()
+	+e('div').row
+		+logo()
 
-	+e('div').text
-		+e('h1').title HTML/CSS Training
-		
-		+e('h2').subtitle 3 Column Prototype
+		+e('div').text
+			+e('h1').title HTML/CSS Training
+			
+			+e('h2').subtitle 3 Column Prototype
+	
+	+e('div').row
+		+nav({
+			list: [
+				{
+					link: '#',
+					text: 'Nav Sample'
+				},
+				{
+					link: '#',
+					text: 'Nav Sample',
+					list: [
+						{
+							link: '#',
+							text: 'Sub Nav Sample'
+						},
+						{
+							link: '#',
+							text: 'Sub Nav Sample'
+						},
+						{
+							link: '#',
+							text: 'Sub Nav Sample'
+						},
+						{
+							link: '#',
+							text: 'Sub Nav Sample'
+						}
+					]
+				},
+				{
+					link: '#',
+					text: 'Nav Sample'
+				}
+			]
+		})
+
