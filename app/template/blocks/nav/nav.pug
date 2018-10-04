@@ -1,5 +1,5 @@
 mixin nav(data)
-	+b('nav').nav
+	+b(data.mods ? 'nav' : 'div').nav(class= data.mods)
 		+e('ul').list
 			each item in data.list
 				+e('li').item
