@@ -14,6 +14,40 @@
 		#{$nav}__item {
 			float: left;
 		}
+
+		#{$nav}__link {
+			background: none;
+			color: #c8c8c8;
+	
+			&:hover {
+				background: #fff;
+				color: #0c0c0c;
+			}
+		}
+
+		#{$nav}__sublist {
+			min-width: 250px;
+			background: #949494;
+		}
+
+		#{$nav}__sublink {
+			color: #fff;
+
+			&:hover {
+				background: #fff;
+				color: #0c0c0c;
+			}
+		}
+	}
+
+	&_left {
+		#{$nav}__item {
+			margin-bottom: 3px;
+		}
+
+		#{$nav}__link {
+			border-radius: 4px 0 0 4px;
+		}
 	}
 
 	&__list {
@@ -35,11 +69,12 @@
 	&__link {
 		display: block;
 		padding: 4px 13px;
-		color: #c8c8c8;
+		background: #fff;
+		color: $color-main;
 
 		&:hover {
-			background: #fff;
-			color: #0c0c0c;
+			background: $color-main;
+			color: #fff;
 		}
 	}
 
@@ -47,9 +82,9 @@
 		@include list-reset;
 		display: none;
 		position: absolute;
-		min-width: 250px;
+		min-width: 165px;
 		padding: 5px 0 4px;
-		background: #949494;
+		background: $color-main;
 		z-index: 1;
 	}
 
@@ -60,11 +95,12 @@
 	&__sublink {
 		display: block;
 		padding: 0 14px 1px;
-		color: #fff;
+		background: #fff;
+		color: $color-main;
 
 		&:hover {
-			background: #fff;
-			color: #0c0c0c;
+			background: $color-main;
+			color: #fff;
 		}
 	}
 }
