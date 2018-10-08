@@ -19,15 +19,8 @@
 
 //containers
 @mixin containerRegular {
-    max-width: 970px;
+    position: relative;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
-}
-
-@mixin containerComplementary {
-    max-width: 920px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
 }

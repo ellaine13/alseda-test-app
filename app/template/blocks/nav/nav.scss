@@ -1,15 +1,9 @@
 #{$nav} {
+	@include containerRegular;
 	font-size: 1.1666666em;
 	line-height: 1.643;
 
 	&_hor {
-		background: #070707;
-		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA3MDcwNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5NDk0OTQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-		background: -moz-linear-gradient(top, #070707 42%, #949494 100%);
-		background: -webkit-linear-gradient(top, #070707 42%,#949494 100%);
-		background: linear-gradient(to bottom, #070707 42%,#949494 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070707', endColorstr='#949494',GradientType=0 );
-		box-shadow: 0 9px 9px -4px #252525;
 
 		#{$nav}__item {
 			float: left;
@@ -27,10 +21,12 @@
 
 		#{$nav}__sublist {
 			min-width: 250px;
-			background: #949494;
+			padding: 5px 0 4px;
+			background: $color-secondary;
 		}
 
 		#{$nav}__sublink {
+			background: $color-secondary;
 			color: #fff;
 
 			&:hover {
@@ -46,7 +42,20 @@
 		}
 
 		#{$nav}__link {
-			border-radius: 4px 0 0 4px;
+			border-radius: 5px 0 0 5px;
+		}
+
+		#{$nav}__sublist {
+			left: 100%;
+			top: 0;
+		}
+
+		#{$nav}__subitem {
+			&:first-child {
+				#{$nav}__sublink {
+					padding-top: 2px;
+				}
+			}
 		}
 	}
 
@@ -83,7 +92,7 @@
 		display: none;
 		position: absolute;
 		min-width: 165px;
-		padding: 5px 0 4px;
+		padding: 0 0 5px;
 		background: $color-main;
 		z-index: 1;
 	}
@@ -95,12 +104,12 @@
 	&__sublink {
 		display: block;
 		padding: 0 14px 1px;
-		background: #fff;
-		color: $color-main;
+		background: $color-main;
+		color: #fff;
 
 		&:hover {
-			background: $color-main;
-			color: #fff;
+			background: #fff;
+			color: $color-main;
 		}
 	}
 }

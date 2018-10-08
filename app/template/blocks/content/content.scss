@@ -1,10 +1,24 @@
 #{$content} {
-    
+    @include clearfix;
+    @include containerRegular;
+
     &__col {
+        float: left;
 
         &_1 {
             width: 180px;
             padding: 13px 10px;
+        }
+
+        &_2 {
+            width: calc(100% - 380px);
+            padding: 10px 9px;
+            background-color: #fff;
+        }
+
+        &_3 {
+            width: 200px;
+            padding: 15px 11px;
         }
     }
 }

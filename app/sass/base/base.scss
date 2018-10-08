@@ -13,8 +13,31 @@ html {
 }
 
 h1 {
+	margin: .67em 0;
 	font-size: 2em;
-	margin: 0.67em 0;
+}
+
+h2 {
+	margin: 0 0 .3em;
+	font-weight: 400;
+	font-size: 1.6666666em;
+}
+
+h3 {
+	margin: 0 0 .55em;
+	font-weight: 400;
+	font-size: 1.3333333em;
+}
+
+h4 {
+	margin: 0 0 .95em;
+	font-size: 1.1666666em;
+}
+
+h5 {
+	margin: 0 0 .7em;
+	font-size: 1em;
+	font-style: italic;
 }
 
 a {
@@ -89,18 +112,67 @@ body {
 	font-family: $font-main;
 	font-size: 12px;
 	line-height: 1.5;
+	background-color: $color-secondary;
 	color: $color-main;
 }
 
 .wrapper {
 	position: relative;
 	width: 100%;
-	max-width: 1000px;
-	min-height: 100%;
+	min-height: calc(100vh - 30px);
 	margin: 0 auto;
-	padding-bottom: 30px;
 }
 
-main {
-	background-color: #949494;
+ul,
+ol {
+	@include list-reset;
+	margin: .8em 0;
+	padding-left: 17px;
 }
+
+ul {
+	li {
+		position: relative;
+		margin: 0 0 .425em;
+	}
+}
+
+table {
+	width: 100%;
+	margin: 1.3em 0;
+	border-collapse: collapse;
+	border: 0;
+}
+
+tr:nth-child(odd) {
+	background: #adadad;
+}
+
+tr:nth-child(even) {
+	background: #d6d6d6;
+}
+
+th {
+	padding: 6px 13px;
+	font-weight: 400;
+	text-align: left;
+	background-color: #333;
+	color: #fff;
+
+	&:first-child {
+		width: 29.3%;
+	}
+
+	& + & {
+		border-left: 1px solid #fff;
+	}
+}
+
+td {
+	padding: 6px 13px;
+
+	& + & {
+		border-left: 1px solid #333;
+	}
+}
+
