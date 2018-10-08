@@ -1,9 +1,9 @@
 #{$content} {
-    @include clearfix;
     @include containerRegular;
 
     &__col {
-        float: left;
+        display: table-cell;
+        vertical-align: top;
 
         &_1 {
             width: 180px;
@@ -12,6 +12,7 @@
 
         &_2 {
             width: calc(100% - 380px);
+            height: calc(100vh - 163px);
             padding: 10px 9px;
             background-color: #fff;
         }
